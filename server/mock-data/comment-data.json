@@ -1,0 +1,14 @@
+{
+  "comments": [
+    {
+      "char_id": "1",
+      "comment": "First comment. Updated again!",
+      "id": 1
+    },
+    {
+      "char_id": "1",
+      "comment": "New comment",
+      "id": 2
+    }
+  ]
+}
