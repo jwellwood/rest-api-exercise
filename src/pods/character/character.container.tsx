@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import * as api from 'core/api';
+import * as api from 'pods/comment/api';
 import { createEmptyCharacter, CharacterVm } from 'common/models';
 import { mapCharacterFromApiToVm } from 'common/mappers/character.mappers';
 import { CharacterComponent } from './character.component';
 import { Comment } from 'common/models';
 import { linkRoutes } from 'core/router';
+import { getCharacter } from './api';
 
 export const CharacterContainer: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,7 +19,7 @@ export const CharacterContainer: React.FC = () => {
   const [comments, setComments] = React.useState<Comment[]>([]);
 
   const handleLoadCharacter = async () => {
-    const apiCharacter = await api.getCharacter(id);
+    const apiCharacter = await getCharacter(id);
     setCharacter(mapCharacterFromApiToVm(apiCharacter));
   };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import * as api from 'core/api';
+import * as api from './api';
 import { CommentFormComponent } from './components/comment-form.component';
 import { linkRoutes } from 'core/router';
 import { createEmptyComment, Comment } from 'common/models';

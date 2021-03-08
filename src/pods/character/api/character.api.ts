@@ -1,12 +1,11 @@
 import Axios from 'axios';
 import { Character } from 'common/models/character.model';
-
-const apiUrl = 'https://rickandmortyapi.com/api/character';
+import { apiUrl } from 'common/constants';
 
 export const getCharacter = async (id: string): Promise<Character> => {
-  const url = `${apiUrl}/${id}`;
-  const res = await Axios.get(url);
   try {
+    const url = `${apiUrl}/${id}`;
+    const res = await Axios.get(url);
     return res.data;
   } catch (error) {
     console.log(error);

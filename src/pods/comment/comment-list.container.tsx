@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import * as api from 'core/api';
+import * as api from './api';
 import CommentList from './components/comment-list';
 import { linkRoutes } from 'core/router';
 import { Comment } from 'common/models';

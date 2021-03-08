@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Episode } from 'common/models/episode.model';
-import { getEpisodesByCharacter } from 'core/api';
+import { getEpisodesByCharacter } from './api';
 
 export const useEpisodes = (characterEpisodes) => {
-  const [episodes, setEpisodes] = useState([]);
+  const [episodes, setEpisodes] = useState<Episode[]>([]);
 
   const getIdFromEpisodeUrl = (episodeUrl) => {
     return episodeUrl.split('/').reverse()[0];

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CharacterVm } from 'common/models';
-import { getFilteredCharacterCollection } from 'core/api/character-collection.api';
+import { getFilteredCharacterCollection } from './api';
 import { mapFromApiToVm } from 'common/mappers/character-collection.mapper';
 import { mapToCollection } from 'common/mappers';
 
